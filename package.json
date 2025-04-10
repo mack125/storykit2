@@ -1,0 +1,41 @@
+{
+	"name": "storykit",
+	"private": true,
+	"version": "0.1.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "tsc && vite build",
+		"check": "npm run check:format && npm run check:lint && npm run check:types",
+		"check:lint": "eslint src --ext ts,tsx",
+		"check:format": "npx prettier --write \"**/*.{js,jsx,ts,tsx,html,css,scss,md,mdx}\" --ignore-path .gitignore",
+		"check:types": "tsc --noemit",
+		"preview": "vite preview"
+	},
+	"dependencies": {
+		"@emotion/react": "^11.11.1",
+		"@emotion/styled": "^11.11.0",
+		"@fontsource/barlow": "^5.0.13",
+		"@mui/icons-material": "^5.14.9",
+		"@mui/material": "^5.14.9",
+		"@storykit/react": "^0.10.0",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0"
+	},
+	"devDependencies": {
+		"@trivago/prettier-plugin-sort-imports": "^4.2.0",
+		"@types/react": "^18.2.24",
+		"@types/react-dom": "^18.3.0",
+		"@typescript-eslint/eslint-plugin": "^7.4.0",
+		"@typescript-eslint/parser": "^7.4.0",
+		"@vitejs/plugin-react": "^4.2.1",
+		"eslint": "^8.45.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-react-hooks": "^4.6.0",
+		"eslint-plugin-react-refresh": "^0.4.3",
+		"prettier": "^3.2.5",
+		"typescript": "^5.4.3",
+		"vite": "^5.4.14",
+		"vite-plugin-singlefile": "^2.0.1"
+	}
+}

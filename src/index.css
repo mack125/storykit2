@@ -1,0 +1,21 @@
+:root {
+  --navbar-height: 64px;
+  --classification-banner-height: 25px;
+
+  /* Boolean variables that will be set to 1 by the the ClassificationBanner component */
+  --has-classification-header: 0;
+  --has-classification-footer: 0;
+
+  /* Should include any header components, like the Navbar or the ClassificationBanner */
+  --header-height: calc(
+    var(--navbar-height) + (var(--has-classification-header) * var(--classification-banner-height))
+  );
+  /* Should include any footer components, like the ClassificationBanner */
+  --footer-height: calc(var(--has-classification-footer) * var(--classification-banner-height));
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
